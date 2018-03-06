@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import YTSearch from 'youtube-api-search';
-import './App.css';
+import './VideoSearchApp.css';
 
 import SearchBar from './components/SearchBar/SearchBar';
 import VideoList from './components/VideoList/VideoList';
