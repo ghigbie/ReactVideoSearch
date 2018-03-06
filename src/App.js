@@ -5,11 +5,17 @@ import './App.css';
 import SearchBar from './components/SearchBar/SearchBar'
 import APIKey from './services/apiKey';
 
-YTSearch({Key: APIKey, term: 'smurfs'}, (data) => {
+YTSearch({key: APIKey, term: 'smurfs'}, (data) => {
   console.log(data);
 });
 
 class App extends Component {
+  constructor(props){
+    super(props)
+    
+    this.state = {videos: []};
+  }
+  
   render() {
     return (
       <div className="App">
