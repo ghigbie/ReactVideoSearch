@@ -8,7 +8,7 @@ import APIKey from './services/apiKey';
 
 class App extends Component {
   constructor(props){
-    super(props)
+    super(props);
     
     this.state = {videos: []};
     
@@ -19,6 +19,7 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar />
+        {console.log(this.state.videos)}
         <VideoList videos={this.state.videos} />
       </div>
     );
