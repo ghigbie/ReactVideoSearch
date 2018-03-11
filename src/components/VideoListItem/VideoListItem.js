@@ -8,6 +8,7 @@ const VideoListItem = (video) => {
             <div className="video-list media">
                 <div className="media-left">
                     <img src={imageUrl}
+                         alt="From a serach"
                          className="media-object" 
                     />
                 </div>
