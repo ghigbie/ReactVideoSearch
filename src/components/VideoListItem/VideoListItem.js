@@ -6,16 +6,16 @@ const VideoListItem = (props) => {
     
     return(
         <li className="list-group-item">
-            <div className="video-list media">
+            <div className="media">
                 <div className="media-left">
                     <img src={imageUrl}
                          alt="From a searsch"
-                         className="media-object" 
+                         className="mr-3" 
                     />
                 </div>
                 
                 <div className="media-body">
-                    <div className="media-heading">{videoTitle}</div>
+                    <div className="mt-0">{videoTitle}</div>
                 </div>
             </div>
         </li>);
