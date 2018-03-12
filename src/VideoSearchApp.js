@@ -15,14 +15,18 @@ class App extends Component {
       videos: [],
       selectedVideo: null
     };
-    
-    YTSearch({key: APIKey, term: 'ethereum dapp'}, videos => 
-      this.setState({
-        videos: videos,
-        selectedVideo: videos[0]
-      }));
-
+    this.videoSearch('ethereum dapp');
   }
+    
+
+    videoSearch(term){
+      YTSearch({Key: APIKey, term: term}, videos => 
+        this.setState({
+          videos: videos,
+          selectedVideo: videos[0]
+        }));
+    }
+  
   
   render() {
     return (
