@@ -16,8 +16,12 @@ class App extends Component {
       selectedVideo: null
     };
     
-    YTSearch({key: APIKey, term: 'ethereum dapp'}, videos => this.setState({videos}));
-    //onVideoSelected = () => this.setState({selectedVideo});
+    YTSearch({key: APIKey, term: 'ethereum dapp'}, videos => 
+      this.setState({
+        videos: videos,
+        selectedVideo: videos[0]
+      }));
+
   }
   
   render() {
@@ -25,7 +29,9 @@ class App extends Component {
       <div className="App">
         <SearchBar />
         <VideoDetail video={this.state.selectedVideo} />
-        <VideoList videos={this.state.videos} />
+        <VideoList
+          onVideoSelect={selectedVideo => this.setState({selectedVideo})}
+          videos={this.state.videos} />
       </div>
     );
   }
