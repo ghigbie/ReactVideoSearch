@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const VideoDetail = ({video}) => {
     const videoId = video.id.videoId;
@@ -17,3 +17,5 @@ const VideoDetail = ({video}) => {
             </div>
           );  
 };
+
+export default VideoDetail;
